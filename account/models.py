@@ -32,7 +32,7 @@ class User(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     activation_code = models.CharField(max_length=8, blank=True)
 
-    objects = UserManager
+    objects = UserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name']
